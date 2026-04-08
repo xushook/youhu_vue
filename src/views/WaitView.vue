@@ -6,17 +6,21 @@
                 <div :class="['one', index > 2 ? 'two' : '']"><b>{{ index + 1 }}</b></div>
             </div>
             <div class="img">
-                <img :src="item.movie_poster" alt="" height="250px" width="180px">
+                <router-link :to="`/detail/${item.id}`">
+                    <img :src="item.movie_poster" alt="" height="250px" width="180px">
+                </router-link>
             </div>
             <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">{{ item.movie_name }}</a></p>
-                    <p id="txt2">主演：{{ item.starring || '暂无信息' }}</p>
-                    <p id="txt3">上映时间：{{ item.movie_release_date.substring(0, 10) }}</p>
-                </div>
-                <div class="hot">
-                    <p>{{ item.movie_anticipate }} 人想看</p>
-                </div>
+                <router-link :to="`/detail/${item.id}`">
+                    <div class="text">
+                        <p id="txt1"><a href="#">{{ item.movie_name }}</a></p>
+                        <p id="txt2">主演：{{ item.starring || '暂无信息' }}</p>
+                        <p id="txt3">上映时间：{{ item.movie_release_date.substring(0, 10) }}</p>
+                    </div>
+                    <div class="hot">
+                        <p>{{ item.movie_anticipate }} 人想看</p>
+                    </div>
+                </router-link>
             </div>
         </div>
     </div>

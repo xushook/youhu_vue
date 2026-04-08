@@ -3,7 +3,7 @@
         <!-- 头部开始 -->
         <div class="title">
             <img src="@/img/logo.jpg" alt="">
-            <a href="./index.html">榜单</a>
+            <router-link to="/hot" class="back-link">榜单</router-link>
         </div>
     </header>
 </template>
@@ -33,7 +33,7 @@ header {
     vertical-align: middle;
 }
 
-.title>a {
+.title>.back-link {
     display: inline-block;
     height: 60px;
     font-size: 17px;
@@ -44,7 +44,7 @@ header {
 
 }
 
-.title>a:hover {
+.title>.back-link:hover {
     color: #ff6900;
     border-bottom: 4px solid #ff6900;
 }

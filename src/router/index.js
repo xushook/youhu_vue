@@ -6,6 +6,8 @@ import HotView from "@/views/HotView.vue"
 import WaitView from "@/views/WaitView.vue"
 import TopView from "@/views/TopView.vue"
 
+import DetailView from "@/views/DetailView.vue"
+
 //2.安装路由插件
 Vue.use(VueRouter)
 
@@ -25,6 +27,10 @@ const routes = [
     },{
         path: "/top",
         component: TopView
+    },
+    {
+        path: "/detail/:id",
+        component: DetailView
     }
 ]
 
