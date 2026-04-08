@@ -3,194 +3,21 @@
 <article>
     <div class="wrap">
         <!-- 1 -->
-        <div class="topone">
+        <div class="topone" v-for="(item, index) in hotList" :key="item.id">
             <div class="onebox">
-                <div class="one"><b>1</b></div>
+                <div :class="['one', index > 2 ? 'two' : '']"><b>{{index + 1}}</b></div>
             </div>
             <div class="img">
-                <img src="@/img/乘船而去.webp" alt="" height="250px" width="180px">
+                <img :src="item.movie_poster" alt="" height="250px" width="180px">
             </div>
             <div class="right">
                 <div class="text">
-                    <p id="txt1"><a href="#">乘船而去</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2020-08-12</p>
+                    <p id="txt1"><a href="#">{{ item.movie_name }}</a></p>
+                    <p id="txt2">主演：{{ item.starring  || "暂无信息" }}</p>
+                    <p id="txt3">上映时间：{{ item.movie_release_date.split(' ')[0] }}</p>
                 </div>
                 <div class="hot">
-                    <p>8.8</p>
-                </div>
-            </div>
-        </div>
-        <!-- 2 -->
-        <div class="topone">
-            <div class="onebox">
-                <div class="one"><b>2</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/功夫熊猫4.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">功夫熊猫4</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2020-06-14</p>
-                </div>
-                <div class="hot">
-                    <p>9.6</p>
-                </div>
-            </div>
-        </div>
-        <!-- 3 -->
-        <div class="topone">
-            <div class="onebox">
-                <div class="one"><b>3</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/大反派.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">大反派</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-02-12</p>
-                </div>
-                <div class="hot">
-                    <p>9.0</p>
-                </div>
-            </div>
-        </div>
-        <!-- 4 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>4</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/我们一起摇太阳.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">我们一起摇太阳</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p>8.6</p>
-                </div>
-            </div>
-        </div>
-        <!-- 5 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>5</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/白日之下.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">白日之下</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p>9.8</p>
-                </div>
-            </div>
-        </div>
-        <!-- 6 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>6</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/第二十条.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">第二十条</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p>6.6</p>
-                </div>
-            </div>
-        </div>
-        <!-- 7 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>7</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/草木人间.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">草木人间</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p>7.5</p>
-                </div>
-            </div>
-        </div>
-        <!-- 8 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>8</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/38dd31a0e1b18e1b00aeb2170c5a65b13885486_Iei04vn.jpg" alt="" height="250px"
-                    width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">除暴</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p>8.3</p>
-                </div>
-            </div>
-        </div>
-        <!-- 9 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>9</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/ece9ff81e6f0af2c859aa151e42a33312706648.jpg" alt="" height="250px"
-                    width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">唐人街探案3</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2020-03-12</p>
-                </div>
-                <div class="hot">
-                    <p>8.1</p>
-                </div>
-            </div>
-        </div>
-        <!-- 10 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>10</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/雪豹.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">雪豹</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-01-12</p>
-                </div>
-                <div class="hot">
-                    <p>5.5</p>
+                    <p>{{item.movie_score}}</p>
                 </div>
             </div>
         </div>
@@ -199,8 +26,27 @@
 </template>
 
 <script>
+import { getMoviesData } from '@/api/movie';
 export default {
-    name: "HotView"
+    name: "HotView",
+    data() {
+        return {
+            hotList: [] //存放热评数组
+        }
+    },
+    created() {
+        this.fetchData()
+    },
+    methods: {
+        async fetchData() {
+            try {
+                const res = await getMoviesData()
+                this.hotList = res.movies_hot
+            } catch (error) {
+                console.error("获取数据失败", error)
+            }
+        }
+    }
 }
 </script>
 

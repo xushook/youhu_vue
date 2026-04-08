@@ -9,13 +9,13 @@
                 <div class="wrap">
                     <ul class="nav-one">
                         <li>
-                            <a href="#">热评口碑榜</a>
+                            <router-link to="/hot">热评口碑榜</router-link>
                         </li>
                         <li>
-                            <a href="./wait.html" target="_self">最受期待榜</a>
+                            <router-link to="/wait">最受期待榜</router-link>
                         </li>
                         <li>
-                            <a href="./top.html" target="_self">国内票房榜</a>
+                            <router-link to="/top">国内票房榜</router-link>
                         </li>
                     </ul>
                 </div>
@@ -60,11 +60,12 @@ nav {
     border-bottom: 1px solid #e0e0e0;
     box-sizing: border-box;
 }
-/* .nav-one .router-link-active {
+/* *********************************** */
+.nav-one .router-link-active {
     color: #ff6900;
     border-bottom: 3px solid rgb(239, 66, 56);
-} */
-
+}
+/* ************************************ */
 .nav-one>li {
     float: left;
     width: 80px;

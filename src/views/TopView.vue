@@ -3,194 +3,21 @@
 <article>
     <div class="wrap">
         <!-- 1 -->
-        <div class="topone">
+        <div class="topone" v-for="(item, index) in topList" :key="item.id">
             <div class="onebox">
-                <div class="one"><b>1</b></div>
+                <div :class="['one', index > 2 ? 'two' : '']"><b>{{ index + 1 }}</b></div>
             </div>
             <div class="img">
-                <img src="@/img/乘船而去.webp" alt="" height="250px" width="180px">
+                <img :src="item.movie_poster" alt="" height="250px" width="180px">
             </div>
             <div class="right">
                 <div class="text">
-                    <p id="txt1"><a href="#">乘船而去</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2020-08-12</p>
+                    <p id="txt1"><a href="#">{{ item.movie_name }}</a></p>
+                    <p id="txt2">主演：{{ item.starring || '暂无信息' }}</p>
+                    <p id="txt3">上映时间：{{ item.movie_release_date.substring(0, 10) }}</p>
                 </div>
                 <div class="hot">
-                    <p><span id="txt4">总票房：</span>310000.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 2 -->
-        <div class="topone">
-            <div class="onebox">
-                <div class="one"><b>2</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/功夫熊猫4.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">功夫熊猫4</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2020-06-14</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>408000.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 3 -->
-        <div class="topone">
-            <div class="onebox">
-                <div class="one"><b>3</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/大反派.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">大反派</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-02-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>306500.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 4 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>4</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/我们一起摇太阳.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">我们一起摇太阳</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>42500.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 5 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>5</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/白日之下.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">白日之下</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>22500.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 6 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>6</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/第二十条.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">第二十条</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>38500.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 7 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>7</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/草木人间.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">草木人间</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>26500.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 8 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>8</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/38dd31a0e1b18e1b00aeb2170c5a65b13885486_Iei04vn.jpg" alt="" height="250px"
-                    width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">除暴</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-03-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>12500.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 9 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>9</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/ece9ff81e6f0af2c859aa151e42a33312706648.jpg" alt="" height="250px"
-                    width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">唐人街探案3</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2020-03-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>25500.00<span id="txt4">万</span></p>
-                </div>
-            </div>
-        </div>
-        <!-- 10 -->
-        <div class="topone">
-            <div class="onebox ">
-                <div class="one two"><b>10</b></div>
-            </div>
-            <div class="img">
-                <img src="@/img/雪豹.webp" alt="" height="250px" width="180px">
-            </div>
-            <div class="right">
-                <div class="text">
-                    <p id="txt1"><a href="#">雪豹</a></p>
-                    <p id="txt2">主演：暂无信息</p>
-                    <p id="txt3">上映时间：2024-01-12</p>
-                </div>
-                <div class="hot">
-                    <p><span id="txt4">总票房：</span>62500.00<span id="txt4">万</span></p>
+                    <p><span id="txt4">总票房：</span>{{ item.movie_box_office }}<span id="txt4">万</span></p>
                 </div>
             </div>
         </div>
@@ -199,8 +26,28 @@
 </template>
 
 <script>
+    import { getMoviesData } from '@/api/movie'
     export default {
         name: "TopView",
+        data() {
+            return {
+                topList: [] 
+            }
+        },
+        created() {
+            this.fetchData()
+        },
+        methods: {
+            async fetchData() {
+                try {
+                    const res = await getMoviesData()
+                    // 票房榜取 movies_top
+                    this.topList = res.movies_top 
+                } catch (error) {
+                    console.error("获取票房数据失败", error)
+                }
+            }
+        }
     }
 </script>
 
